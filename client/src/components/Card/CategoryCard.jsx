@@ -24,7 +24,6 @@ const CategoryCard = ({ item }) => {
           />
         </div>
         <h2>{item?.attributes.title}</h2>
-        {/* <h3>{item?.attributes.desc}</h3> */}
         <div className="prices">
           <h3>
             <CurrencyRupeeIcon className="rupee" />

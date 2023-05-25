@@ -12,7 +12,6 @@ const ProductCard = ({ item, id }) => {
           {/* By default it's not sending media, to see those images we're gonna be using emv file*/}
           <img
             src={`http://localhost:1337${item.attributes.img.data.attributes.url}`}
-            // For this item.attributes?.img?.data?.attributes?.url --- see console.log(data) in FeaturedProducts
             alt=""
             className="mainImg"
           />

@@ -9,7 +9,6 @@ import ChevronLeftOutlinedIcon from "@mui/icons-material/ChevronLeftOutlined";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 
 import "./Cart.scss";
-// import toast from 'react-hot-toast';
 import { useStateContext } from "../../context/StateContext";
 
 import {loadStripe} from '@stripe/stripe-js';
@@ -18,7 +17,7 @@ import axios from "axios";
 const Cart = () => {
   
   const cartRef = useRef();
-  const { totalPrice,setTotalPrice, totalQuantities, setTotalQuantities, cartItems, setCartItems, setShowCart, toggleCartItemQuanitity, onRemove,
+  const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuanitity, onRemove,
   } = useStateContext();
 
   const stripePromise = loadStripe(

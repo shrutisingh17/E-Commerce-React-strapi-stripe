@@ -33,7 +33,7 @@ Stripe account for payment processing
 ## Installation
 Clone the repository:
 
-git clone <repository_url>
+git clone https://github.com/shrutisingh17/E-Commerce.git
 
 Navigate to the project directory:
 

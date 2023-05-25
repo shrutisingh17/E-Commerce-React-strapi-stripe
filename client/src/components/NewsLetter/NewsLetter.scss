@@ -4,7 +4,6 @@
     display: flex;
     align-items: center;
     background: #f9f9f9 url("../../../public/img/newsletter-bg.jpeg");
-    // background: url("newsletter-bbg.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -48,9 +47,6 @@
                 padding: 0 12px;
                 font-size: 16px;
                 outline: none;
-                // @include md {
-                //     width: 300px;
-                // }
             }
             button {
                 outline: 0;
@@ -63,13 +59,8 @@
                 cursor: pointer;
                 font-size: 16px;
                 color: white;
-                // background: #8e2de2;
                 background: #2879fe;
-                // border-bottom: 3px solid #6516aa;
                 border-bottom: 3px solid #1959c1;
-                // @include md {
-                //     width: 120px;
-                // }
             }
         }
         .social-icons {

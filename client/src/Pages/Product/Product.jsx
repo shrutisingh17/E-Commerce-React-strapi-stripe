@@ -7,7 +7,7 @@ import RemoveOutlinedIcon from "@mui/icons-material/RemoveOutlined";
 import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import BalanceIcon from "@mui/icons-material/Balance";
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 
 import useFetch from "../../hooks/useFetch";
@@ -24,7 +24,9 @@ function Product() {
     incQty,
     qty,
     onAdd,
+    wishlistItems,
     onAddToWishlist,
+    onRemoveFromWishlist,
     selectedSize,
     setSelectedSize,
     showError,
@@ -44,6 +46,10 @@ function Product() {
       (data?.oldPrice || data?.attributes?.price + 50)) *
     100;
   const discount = percentageDiscount.toFixed(0);
+
+  const isProductInWishlist = (productId) => {
+    return wishlistItems.some((item) => item.id === productId);
+  };  
 
   return (
     <>
@@ -157,9 +163,25 @@ function Product() {
                 </button>
                 <Toaster toastOptions={{ duration: 2000}}/>
                 
-                <button className="wish" onClick={() => onAddToWishlist(data)}>
+                {isProductInWishlist(data?.id) ? (
+                  <button
+                    className="wish"
+                    onClick={() => onRemoveFromWishlist(data)}
+                  >
+                    <FavoriteIcon /> REMOVE FROM WISHLIST
+                  </button>
+                ) : (
+                  <button
+                    className="wish"
+                    onClick={() => onAddToWishlist(data)}
+                  >
+                    <FavoriteBorderIcon /> ADD TO WISHLIST
+                  </button>
+                )}
+
+                {/* <button className="wish" onClick={() => onAddToWishlist(data)}>
                   <FavoriteBorderIcon /> ADD TO WISH LIST
-                </button>
+                </button> */}
               </div>
               <div className="details">
               <div className="info">

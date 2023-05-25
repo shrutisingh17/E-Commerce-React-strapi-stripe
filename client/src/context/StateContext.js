@@ -23,7 +23,14 @@ export const StateContext = ({ children }) => {
       return;
     }
     setWishlistItems([...wishlistItems, product]);
+  }; 
+  const onRemoveFromWishlist = (product) => {
+    const updatedWishlistItems = wishlistItems.filter(
+      (item) => item.id !== product.id
+    );
+    setWishlistItems(updatedWishlistItems);
   };
+  
 
   const onAdd = (product, quantity) => {
     if (!selectedSize) {
@@ -151,7 +158,6 @@ export const StateContext = ({ children }) => {
         onAdd,
         toggleCartItemQuanitity,
         onRemove,
-        onAddToWishlist,
         cartItems,
         setCartItems,
         setTotalPrice,
@@ -163,6 +169,7 @@ export const StateContext = ({ children }) => {
         wishlistItems,
         setWishlistItems,
         onAddToWishlist,
+        onRemoveFromWishlist
       }}
     >
       {children}

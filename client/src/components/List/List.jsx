@@ -10,7 +10,7 @@ const List = ({ subCats, maxPrice, sort, catId }) => {
       .map((item) => `&[filters][sub_categories][id][$eq]=${item}`)
       .join("")}&[filters][price][$lte]=${maxPrice}&_sort=price:${sort}`
 
-    // 1st filter , filtering the category according to selected category
+    // 1st filter ,filtering the category according to selected category
   );
 
   return (
