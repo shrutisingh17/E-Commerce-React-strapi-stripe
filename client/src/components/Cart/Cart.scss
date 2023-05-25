@@ -1,0 +1,191 @@
+.cart-wrapper {
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  transition: all 1s ease-in-out;
+
+  .cart-container {
+    height: 100vh;
+    width: 600px;
+    background-color: white;
+    float: right;
+    padding: 40px 10px;
+    position: relative;
+
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      width: 400px;
+      margin: auto;
+
+      .btn {
+        height: 50px;
+        width: 250px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border: none;
+        background-color: #2879fe;
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 6px;
+        transform: scale(1, 1);
+        transition: transform 0.5s ease;
+      }
+      .btn:hover {
+        transform: scale(1.1, 1.1);
+      }
+    }
+
+    //.heading
+    .cart-heading {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      font-weight: 500;
+      cursor: pointer;
+      gap: 2px;
+      margin-left: 10px;
+      border: none;
+      background-color: transparent;
+
+      .heading {
+        margin-left: 10px;
+      }
+      .cart-num-items {
+        margin-left: 10px;
+        color: #f02d34;
+      }
+    }
+    //empty cart
+    .empty-cart {
+      margin: 40px;
+      text-align: center;
+      h3 {
+        font-weight: 600;
+        font-size: 22px;
+        margin-bottom: 40px;
+      }
+    }
+
+    //products
+    .product-container {
+      margin-top: 15px;
+      overflow: auto;
+      max-height: 68vh;
+      padding: 20px 10px;
+
+      .product {
+        display: flex;
+        gap: 30px;
+        padding: 10px 20px;
+
+        .cart-product-image {
+          width: 120px;
+          height: auto;
+          object-fit: cover;
+          border-radius: 15px;
+        }
+        .item-desc {
+          .flex {
+            display: flex;
+            justify-content: space-between;
+            width: 350px;
+            color: black;
+          }
+          .flex h5,
+          h4 {
+            color: gray;
+            font-size: 18px;
+            font-weight: 500;
+          }
+          p {
+            color: gray;
+            margin-bottom: 10px;
+            font-size: 14px;
+          }
+          h4 {
+            position: relative;
+            font-size: 16px;
+            color: #2879fe;
+            margin-bottom: 10px;
+          }
+          .rupee {
+            color: #2879fe;
+            position: relative;
+            bottom: -3px;
+            height: 16px;
+          }
+          .top {
+            flex-wrap: wrap;
+            gap: 10px;
+          }
+
+          .bottom {
+            margin-top: 0px;
+
+            .quantity-desc {
+              display: flex;
+              align-items: center;
+              border: 1px solid gray;
+
+              span {
+                padding: 2px 6px;
+                cursor: pointer;
+              }
+              .minus {
+                border-right: 1px solid gray;
+              }
+              .num {
+                font-size: 18px;
+                padding: 0 14px;
+                // border-right: 1px solid gray;
+              }
+              .plus {
+                // padding: 8px;
+                border-left: 1px solid gray;
+              }
+            }
+            .remove-item {
+              font-size: 24px;
+              color: #f02d34;
+              cursor: pointer;
+              background: transparent;
+              border: none;
+            }
+          }
+        }
+      }
+    }
+    .cart-bottom {
+      position: absolute;
+      bottom: 8px;
+      right: 5px;
+      width: 100%;
+      padding: 30px 65px;
+
+      .total {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+      .total h3 {
+        position: relative;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .rupee {
+        position: relative;
+        bottom: -3px;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.about-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+  background-color: rgb(247, 244, 244);
+
+  h1 {
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 10px;
+      background-color: #fff;
+    }
+  }
+}
